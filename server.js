@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var mysql = require('mysql')
+var mysql = require('mysql');
 
 var exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({
@@ -8,6 +8,7 @@ app.engine('handlebars', exphbs({
 }));
 app.set('view engine', 'handlebars');
 
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res) {
     res.render('index');
