@@ -1,9 +1,26 @@
 <div class="container">
+	<h2>About You</h2>
+	<form>
+	 	<div class="form-group">
+	    	<label for="exampleInputEmail1">Name</label>
+	    	<input type="email" class="form-control" id="exampleInputEmail1" placeholder="John Smith">
+	  	</div>
+	  	<div class="form-group">
+	    	<label for="exampleInputPassword1">Link to Photo</label>
+	    	<input type="url" class="form-control" id="photoUrl" placeholder="google images">
+	 	</div>
+	</form>
 	<h2>Questions!</h2>
-		<ul>
-		  {{#each questions}}
-		  	<li>{{id}}</li>
-		    <li>{{question}}</li>
+		  {{#each q}}
+		  	<h3>Question {{id}}</h3>
+		    <h4>{{question}}</h4>
+		    <label>
+      			<input type="checkbox"> 1
+      			<input type="checkbox"> 2
+      			<input type="checkbox"> 3
+      			<input type="checkbox"> 4
+      			<input type="checkbox"> 5
+    		</label>
 		  {{/each}}
-		</ul>
+
 </div>
